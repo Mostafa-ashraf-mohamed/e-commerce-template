@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>e-commerce</title>
+    <base href="assets/" />
+    <!-- fontawsome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <!-- nav bar -->
+      <nav class="navbar">
+        <div class="upper-nav">
+          <a class="navbar-brand" href="#">E-commerce</a>
+          <ul class="navbar-nav">
+            <li class="nav-item w-60 mode-1">
+              <button id="toggle-btn" class="btn btn-with-icon"></button>
+              <div class="search-bar">
+                <form action="" method="post">
+                  <label for="categories" class="hidden-text"
+                    >choose categories</label
+                  >
+                  <select name="categories" id="categories">
+                    <option value="all" selected>All categories</option>
+                    <option value="c1">categories 1</option>
+                    <option value="c2">categories 2</option>
+                    <option value="c3">categories 3</option>
+                  </select>
+                  <!--categories-->
+
+                  <label for="search-text-bar" class="hidden-text"
+                    >enter text for to search</label
+                  >
+                  <input
+                    type="text"
+                    name="search"
+                    id="search-text-bar"
+                    placeholder="Search anything"
+                  /><!--text input-->
+                  <button class="btn">
+                    <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+                  </button>
+                </form>
+              </div>
+            </li>
+            <li class="nav-item">
+              <button class="btn btn-orange">Help</button>
+            </li>
+
+            <li class="nav-item">
+              <button class="btn btn-with-icon" id="account-button">
+                Account
+              </button>
+            </li>
+            <li class="nav-item position-relative">
+              <button class="btn btn-with-icon" id="shoping-button">
+                <span class="notify">16</span>Shoping
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="lower-nav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Jewelry & Accessories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Clothing & Shoes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home & Living</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Wedding & Party</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Toys & Entertainment</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Art & Collectibles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Craft Supplies & Tools</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- end navbar -->
+    </header>
+    <main>
+      <section id="cards">
+        <div class="bg-colors"></div>
+        <div class="row cards-section-one">
+          <div class="col-4 col-sm-12 position-relative">
+            <picture>
+              <!-- Desktop and Laptop Screens -->
+              <source media="(min-width: 992px)" srcset="img/card1.png" />
+
+              <!-- Smaller Screens -->
+              <img src="img/card1sm.png" alt="Card Image" />
+            </picture>
+            <span class="tags">Clothing & Shoes</span>
+          </div>
+          <div class="col-4 col-sm-12 position-relative">
+            <picture>
+              <!-- Desktop and Laptop Screens -->
+              <source media="(min-width: 992px)" srcset="img/card2.png" />
+
+              <!-- Smaller Screens -->
+              <img src="img/card2sm.png" alt="Card Image" />
+            </picture>
+            <span class="tags">Home & Living</span>
+          </div>
+          <div class="col-4 col-sm-12 position-relative">
+            <picture>
+              <!-- Desktop and Laptop Screens -->
+              <source media="(min-width: 992px)" srcset="img/card3.png" />
+
+              <!-- Smaller Screens -->
+              <img src="img/card3sm.png" alt="Card Image" />
+            </picture>
+            <span class="tags">Art & Collectibles</span>
+          </div>
+        </div>
+        <div class="cards-section-two">
+          <div class="cards-group">
+            <div class="card-d3fbd9 position-relative card-prod">
+              <button class="btn add-to-card">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path
+                    d="M2.96712 9.27214L7.60219 13.6263C7.65404 13.675 7.67996 13.6993 7.70464 13.7174C7.8805 13.8462 8.1195 13.8462 8.29536 13.7174C8.32004 13.6993 8.34597 13.675 8.39781 13.6263L13.0329 9.27214C14.337 8.04706 14.4954 6.03106 13.3985 4.61738L13.1923 4.35156C11.8802 2.66038 9.24642 2.94401 8.32445 4.87576C8.19421 5.14864 7.80579 5.14864 7.67556 4.87576C6.75358 2.94401 4.11982 2.66038 2.8077 4.35156L2.60146 4.61738C1.50463 6.03106 1.663 8.04706 2.96712 9.27214Z"
+                    stroke="#5F5F5F"
+                    stroke-width="2"
+                  />
+                </svg>
+              </button>
+              <div class="pic-prod">
+                <img
+                  src="img/pricecard1.png"
+                  class="w-100"
+                  alt="price card 1"
+                />
+              </div>
+
+              <div class="colors">
+                <p class="head">Colors</p>
+                <div class="color-group">
+                  <span class="price-card-color color-7cb93e"></span>
+                  <span class="price-card-color color-33abc6"></span>
+                  <span class="price-card-color color-1ccd8d"></span>
+                  <span class="price-card-color color-3f65ea"></span>
+                  <span class="price-card-color color-f64a69"></span>
+                  <span class="price-card-color color-a635ec"></span>
+                  <span class="price-card-color color-f9a85d"></span>
+                </div>
+                <p class="body">Vonna Neva Walnut Sandalye Chair</p>
+                <p class="price">195,13 $</p>
+              </div>
+            </div>
+            <div class="card-ffe4bd position-relative card-prod">
+              <button class="btn add-to-card">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path
+                    d="M2.96712 9.27214L7.60219 13.6263C7.65404 13.675 7.67996 13.6993 7.70464 13.7174C7.8805 13.8462 8.1195 13.8462 8.29536 13.7174C8.32004 13.6993 8.34597 13.675 8.39781 13.6263L13.0329 9.27214C14.337 8.04706 14.4954 6.03106 13.3985 4.61738L13.1923 4.35156C11.8802 2.66038 9.24642 2.94401 8.32445 4.87576C8.19421 5.14864 7.80579 5.14864 7.67556 4.87576C6.75358 2.94401 4.11982 2.66038 2.8077 4.35156L2.60146 4.61738C1.50463 6.03106 1.663 8.04706 2.96712 9.27214Z"
+                    stroke="#5F5F5F"
+                    stroke-width="2"
+                  />
+                </svg>
+              </button>
+              <div class="pic-prod">
+                <img
+                  src="img/pricecard2.png"
+                  class="w-100"
+                  alt="price card 2"
+                />
+              </div>
+
+              <div class="colors">
+                <p class="head">Colors</p>
+                <div class="color-group">
+                  <span class="price-card-color color-7cb93e"></span>
+                  <span class="price-card-color color-33abc6"></span>
+                  <span class="price-card-color color-3f65ea"></span>
+                  <span class="price-card-color color-f64a69"></span>
+                  <span class="price-card-color color-f9a85d"></span>
+                </div>
+                <p class="body">Vonna Neva Walnut Sandalye Chair</p>
+                <p class="price">195,13 $</p>
+              </div>
+            </div>
+            <div class="card-d9abfd position-relative card-prod">
+              <button class="btn add-to-card">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path
+                    d="M2.96712 9.27214L7.60219 13.6263C7.65404 13.675 7.67996 13.6993 7.70464 13.7174C7.8805 13.8462 8.1195 13.8462 8.29536 13.7174C8.32004 13.6993 8.34597 13.675 8.39781 13.6263L13.0329 9.27214C14.337 8.04706 14.4954 6.03106 13.3985 4.61738L13.1923 4.35156C11.8802 2.66038 9.24642 2.94401 8.32445 4.87576C8.19421 5.14864 7.80579 5.14864 7.67556 4.87576C6.75358 2.94401 4.11982 2.66038 2.8077 4.35156L2.60146 4.61738C1.50463 6.03106 1.663 8.04706 2.96712 9.27214Z"
+                    stroke="#5F5F5F"
+                    stroke-width="2"
+                  />
+                </svg>
+              </button>
+              <div class="pic-prod">
+                <img
+                  src="img/pricecard3.png"
+                  class="w-100"
+                  alt="price card 3"
+                />
+              </div>
+
+              <div class="colors">
+                <p class="head">Colors</p>
+                <div class="color-group">
+                  <span class="price-card-color color-33abc6"></span>
+                  <span class="price-card-color color-1ccd8d"></span>
+                  <span class="price-card-color color-a635ec"></span>
+                </div>
+                <p class="body">Vonna Neva Walnut Sandalye Chair</p>
+                <p class="price">195,13 $</p>
+              </div>
+            </div>
+            <div class="card-fdf0ab position-relative card-prod">
+              <button class="btn add-to-card">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path
+                    d="M2.96712 9.27214L7.60219 13.6263C7.65404 13.675 7.67996 13.6993 7.70464 13.7174C7.8805 13.8462 8.1195 13.8462 8.29536 13.7174C8.32004 13.6993 8.34597 13.675 8.39781 13.6263L13.0329 9.27214C14.337 8.04706 14.4954 6.03106 13.3985 4.61738L13.1923 4.35156C11.8802 2.66038 9.24642 2.94401 8.32445 4.87576C8.19421 5.14864 7.80579 5.14864 7.67556 4.87576C6.75358 2.94401 4.11982 2.66038 2.8077 4.35156L2.60146 4.61738C1.50463 6.03106 1.663 8.04706 2.96712 9.27214Z"
+                    stroke="#5F5F5F"
+                    stroke-width="2"
+                  />
+                </svg>
+              </button>
+              <div class="pic-prod">
+                <img
+                  src="img/pricecard4.png"
+                  class="w-100"
+                  alt="price card 4"
+                />
+              </div>
+
+              <div class="colors">
+                <p class="head">Colors</p>
+                <div class="color-group">
+                  <span class="price-card-color color-7cb93e"></span>
+                  <span class="price-card-color color-33abc6"></span>
+                  <span class="price-card-color color-1ccd8d"></span>
+                  <span class="price-card-color color-3f65ea"></span>
+                  <span class="price-card-color color-f64a69"></span>
+                  <span class="price-card-color color-a635ec"></span>
+                  <span class="price-card-color color-f9a85d"></span>
+                </div>
+                <p class="body">Vonna Neva Walnut Sandalye Chair</p>
+                <p class="price">195,13 $</p>
+              </div>
+            </div>
+          </div>
+          <div class="cards-section-two-nav remove-card actve-card">
+            <button class="btn btn-cards active" id="card1">
+              <span class="hidden-text">card 1</span>
+            </button>
+            <button class="btn btn-cards" id="card2">
+              <span class="hidden-text">card 2</span>
+            </button>
+            <button class="btn btn-cards" id="card3">
+              <span class="hidden-text">card 3</span>
+            </button>
+            <button class="btn btn-cards" id="card4">
+              <span class="hidden-text">card 4</span>
+            </button>
+          </div>
+        </div>
+        <div class="row cards-section-three">
+          <div class="col-4 col-sm-12 actve-card">
+            <div class="row image-card">
+              <div class="col-7 col-lg-12 col-sm-12 card-body">
+                <h3 class="header">A community doing good</h3>
+                <p class="body">
+                  Commerce is a global online marketplace, where people.
+                </p>
+              </div>
+              <div class="col-5 col-lg-12 col-sm-12">
+                <img
+                  class="card-img"
+                  src="img/thirdcard1.png"
+                  alt="image in card 1 "
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-4 col-sm-12">
+            <div class="row image-card">
+              <div class="col-7 col-lg-12 col-sm-12 card-body">
+                <h3 class="header">A community doing good</h3>
+                <p class="body">
+                  Commerce is a global online marketplace, where people.
+                </p>
+              </div>
+              <div class="col-5 col-lg-12 col-sm-12">
+                <img
+                  class="card-img"
+                  src="img/thirdcard2.png"
+                  alt="image in card 2 "
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-4 col-sm-12">
+            <div class="row image-card">
+              <div class="col-7 col-lg-12 col-sm-12 card-body">
+                <h3 class="header">A community doing good</h3>
+                <p class="body">
+                  Commerce is a global online marketplace, where people.
+                </p>
+              </div>
+              <div class="col-5 col-lg-12 col-sm-12">
+                <img
+                  class="card-img"
+                  src="img/thirdcard3.png"
+                  alt="image in card 3 "
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="cards-section-two-nav remove-card actve-card">
+            <button class="btn btn-cards active" id="card21">
+              <span class="hidden-text">card 21</span>
+            </button>
+            <button class="btn btn-cards" id="card22">
+              <span class="hidden-text">card 22</span>
+            </button>
+            <button class="btn btn-cards" id="card23">
+              <span class="hidden-text">card 23</span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section id="sellers">
+        <div class="header">
+          <h2>Find things you'll love. Support independent sellers.</h2>
+          <p>Only on polka.</p>
+        </div>
+        <button class="btn btn-circular left">
+          <i class="fa-solid fa-chevron-left fa-lg"></i>
+        </button>
+        <div class="img-group">
+          <div class="img-card response-col-6">
+            <img src="img/sellers1.png" alt="sellers profile image" />
+            <p>Craft Kits</p>
+          </div>
+          <div class="img-card response-col-6">
+            <img src="img/sellers2.png" alt="sellers profile image" />
+            <p>Throw Pillows</p>
+          </div>
+          <div class="img-card response-col-6">
+            <img src="img/sellers3.png" alt="sellers profile image" />
+            <p>Natural Glass</p>
+          </div>
+          <div class="img-card response-col-6">
+            <img src="img/sellers4.png" alt="sellers profile image" />
+            <p>Self-care</p>
+          </div>
+          <div class="img-card response-col-6">
+            <img src="img/sellers5.png" alt="sellers profile image" />
+            <p>Gift Ideas</p>
+          </div>
+          <div class="img-card response-col-6">
+            <img src="img/sellers6.png" alt="sellers profile image" />
+            <p>Wall Decor</p>
+          </div>
+          <div class="img-card response-col-6">
+            <img src="img/sellers7.png" alt="sellers profile image" />
+            <p>Wedding</p>
+          </div>
+          <div class="img-card response-col-6">
+            <img src="img/sellers8.png" alt="sellers profile image" />
+            <p>Life Style</p>
+          </div>
+        </div>
+        <button class="btn btn-circular right">
+          <i class="fa-solid fa-chevron-right fa-lg"></i>
+        </button>
+
+        <div class="cards-section-two-nav remove-card actve-card">
+          <button class="btn btn-cards active" id="card31">
+            <span class="hidden-text">card 21</span>
+          </button>
+          <button class="btn btn-cards" id="card32">
+            <span class="hidden-text">card 22</span>
+          </button>
+          <button class="btn btn-cards" id="card33">
+            <span class="hidden-text">card 23</span>
+          </button>
+        </div>
+      </section>
+      <section id="discover">
+        <div class="header">
+          <h2>Discover unique hand-picked items</h2>
+        </div>
+        <button class="btn btn-circular left">
+          <i class="fa-solid fa-chevron-left fa-lg"></i>
+        </button>
+        <div class="prod-group">
+          <div class="prod-card">
+            <img src="img/1.png" alt="sellers profile image" />
+            <p class="title">Distressed Tote Leather Bag Leather Bag</p>
+            <p class="price">216,27 $</p>
+            <button class="btn add-to-card">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path
+                  d="M2.96712 9.27214L7.60219 13.6263C7.65404 13.675 7.67996 13.6993 7.70464 13.7174C7.8805 13.8462 8.1195 13.8462 8.29536 13.7174C8.32004 13.6993 8.34597 13.675 8.39781 13.6263L13.0329 9.27214C14.337 8.04706 14.4954 6.03106 13.3985 4.61738L13.1923 4.35156C11.8802 2.66038 9.24642 2.94401 8.32445 4.87576C8.19421 5.14864 7.80579 5.14864 7.67556 4.87576C6.75358 2.94401 4.11982 2.66038 2.8077 4.35156L2.60146 4.61738C1.50463 6.03106 1.663 8.04706 2.96712 9.27214Z"
+                  stroke="#5F5F5F"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="prod-card">
+            <img src="img/2.png" alt="sellers profile image" />
+            <p class="title">Distressed Tote Leather Bag Leather Bag</p>
+            <p class="price">216,27 $</p>
+            <button class="btn add-to-card">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path
+                  d="M2.96712 9.27214L7.60219 13.6263C7.65404 13.675 7.67996 13.6993 7.70464 13.7174C7.8805 13.8462 8.1195 13.8462 8.29536 13.7174C8.32004 13.6993 8.34597 13.675 8.39781 13.6263L13.0329 9.27214C14.337 8.04706 14.4954 6.03106 13.3985 4.61738L13.1923 4.35156C11.8802 2.66038 9.24642 2.94401 8.32445 4.87576C8.19421 5.14864 7.80579 5.14864 7.67556 4.87576C6.75358 2.94401 4.11982 2.66038 2.8077 4.35156L2.60146 4.61738C1.50463 6.03106 1.663 8.04706 2.96712 9.27214Z"
+                  stroke="#5F5F5F"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="prod-card">
+            <img src="img/3.png" alt="sellers profile image" />
+            <p class="title">Distressed Tote Leather Bag Leather Bag</p>
+            <p class="price">216,27 $</p>
+            <button class="btn add-to-card">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path
+                  d="M2.96712 9.27214L7.60219 13.6263C7.65404 13.675 7.67996 13.6993 7.70464 13.7174C7.8805 13.8462 8.1195 13.8462 8.29536 13.7174C8.32004 13.6993 8.34597 13.675 8.39781 13.6263L13.0329 9.27214C14.337 8.04706 14.4954 6.03106 13.3985 4.61738L13.1923 4.35156C11.8802 2.66038 9.24642 2.94401 8.32445 4.87576C8.19421 5.14864 7.80579 5.14864 7.67556 4.87576C6.75358 2.94401 4.11982 2.66038 2.8077 4.35156L2.60146 4.61738C1.50463 6.03106 1.663 8.04706 2.96712 9.27214Z"
+                  stroke="#5F5F5F"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="prod-card">
+            <img src="img/4.png" alt="sellers profile image" />
+            <p class="title">Distressed Tote Leather Bag Leather Bag</p>
+            <p class="price">216,27 $</p>
+            <button class="btn add-to-card">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path
+                  d="M2.96712 9.27214L7.60219 13.6263C7.65404 13.675 7.67996 13.6993 7.70464 13.7174C7.8805 13.8462 8.1195 13.8462 8.29536 13.7174C8.32004 13.6993 8.34597 13.675 8.39781 13.6263L13.0329 9.27214C14.337 8.04706 14.4954 6.03106 13.3985 4.61738L13.1923 4.35156C11.8802 2.66038 9.24642 2.94401 8.32445 4.87576C8.19421 5.14864 7.80579 5.14864 7.67556 4.87576C6.75358 2.94401 4.11982 2.66038 2.8077 4.35156L2.60146 4.61738C1.50463 6.03106 1.663 8.04706 2.96712 9.27214Z"
+                  stroke="#5F5F5F"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="prod-card">
+            <img src="img/5.png" alt="sellers profile image" />
+            <p class="title">Distressed Tote Leather Bag Leather Bag</p>
+            <p class="price">216,27 $</p>
+            <button class="btn add-to-card">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path
+                  d="M2.96712 9.27214L7.60219 13.6263C7.65404 13.675 7.67996 13.6993 7.70464 13.7174C7.8805 13.8462 8.1195 13.8462 8.29536 13.7174C8.32004 13.6993 8.34597 13.675 8.39781 13.6263L13.0329 9.27214C14.337 8.04706 14.4954 6.03106 13.3985 4.61738L13.1923 4.35156C11.8802 2.66038 9.24642 2.94401 8.32445 4.87576C8.19421 5.14864 7.80579 5.14864 7.67556 4.87576C6.75358 2.94401 4.11982 2.66038 2.8077 4.35156L2.60146 4.61738C1.50463 6.03106 1.663 8.04706 2.96712 9.27214Z"
+                  stroke="#5F5F5F"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="prod-card">
+            <img src="img/6.png" alt="sellers profile image" />
+            <p class="title">Distressed Tote Leather Bag Leather Bag</p>
+            <p class="price">216,27 $</p>
+            <button class="btn add-to-card">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path
+                  d="M2.96712 9.27214L7.60219 13.6263C7.65404 13.675 7.67996 13.6993 7.70464 13.7174C7.8805 13.8462 8.1195 13.8462 8.29536 13.7174C8.32004 13.6993 8.34597 13.675 8.39781 13.6263L13.0329 9.27214C14.337 8.04706 14.4954 6.03106 13.3985 4.61738L13.1923 4.35156C11.8802 2.66038 9.24642 2.94401 8.32445 4.87576C8.19421 5.14864 7.80579 5.14864 7.67556 4.87576C6.75358 2.94401 4.11982 2.66038 2.8077 4.35156L2.60146 4.61738C1.50463 6.03106 1.663 8.04706 2.96712 9.27214Z"
+                  stroke="#5F5F5F"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="cards-section-two-nav remove-card actve-card">
+          <button class="btn btn-cards active" id="card31">
+            <span class="hidden-text">card 21</span>
+          </button>
+          <button class="btn btn-cards" id="card32">
+            <span class="hidden-text">card 22</span>
+          </button>
+          <button class="btn btn-cards" id="card33">
+            <span class="hidden-text">card 23</span>
+          </button>
+        </div>
+        <button class="btn btn-circular right">
+          <i class="fa-solid fa-chevron-right fa-lg"></i>
+        </button>
+      </section>
+      <section id="discover-items">
+        <div class="section-nav">
+          <ul class="ul-nav">
+            <li class="break-word"><span>Modern Farmhouse</span></li>
+            <li class="break-word"><span>Eclectic Decor</span></li>
+            <li class="break-word"><span>Polka Boho Decor</span></li>
+            <li class="break-word active"><span>Minimalist Style</span></li>
+            <li class="break-word"><span>Anniversary Gift</span></li>
+            <li class="break-word"><span>Wedding Gifts</span></li>
+          </ul>
+        </div>
+        <div class="row-discover-items">
+          <div class="row-discover-items-img">
+            <img src="img/cardDef.png" class="img" alt="description" />
+          </div>
+          <div class="section-discover-items card-ffe4bd position-relative">
+            <button class="btn add-to-card">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path
+                  d="M2.96712 9.27214L7.60219 13.6263C7.65404 13.675 7.67996 13.6993 7.70464 13.7174C7.8805 13.8462 8.1195 13.8462 8.29536 13.7174C8.32004 13.6993 8.34597 13.675 8.39781 13.6263L13.0329 9.27214C14.337 8.04706 14.4954 6.03106 13.3985 4.61738L13.1923 4.35156C11.8802 2.66038 9.24642 2.94401 8.32445 4.87576C8.19421 5.14864 7.80579 5.14864 7.67556 4.87576C6.75358 2.94401 4.11982 2.66038 2.8077 4.35156L2.60146 4.61738C1.50463 6.03106 1.663 8.04706 2.96712 9.27214Z"
+                  stroke="#5F5F5F"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+            <img src="img/Rectangle 19.png" class="w-100" alt="price card 2" />
+            <div class="colors">
+              <p class="head">Colors</p>
+              <div class="color-group">
+                <span class="price-card-color color-7cb93e"></span>
+                <span class="price-card-color color-33abc6"></span>
+                <span class="price-card-color color-3f65ea"></span>
+                <span class="price-card-color color-f64a69"></span>
+                <span class="price-card-color color-f9a85d"></span>
+              </div>
+              <p class="body">Vonna Neva Walnut Sandalye Chair</p>
+              <p class="price">195,13 $</p>
+            </div>
+          </div>
+          <div class="section-discover-items card-d9abfd position-relative">
+            <button class="btn add-to-card">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path
+                  d="M2.96712 9.27214L7.60219 13.6263C7.65404 13.675 7.67996 13.6993 7.70464 13.7174C7.8805 13.8462 8.1195 13.8462 8.29536 13.7174C8.32004 13.6993 8.34597 13.675 8.39781 13.6263L13.0329 9.27214C14.337 8.04706 14.4954 6.03106 13.3985 4.61738L13.1923 4.35156C11.8802 2.66038 9.24642 2.94401 8.32445 4.87576C8.19421 5.14864 7.80579 5.14864 7.67556 4.87576C6.75358 2.94401 4.11982 2.66038 2.8077 4.35156L2.60146 4.61738C1.50463 6.03106 1.663 8.04706 2.96712 9.27214Z"
+                  stroke="#5F5F5F"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+            <img
+              src="img/Rectangle 19-1.png"
+              class="w-100"
+              alt="price card 3"
+            />
+            <div class="colors">
+              <p class="head">Colors</p>
+              <div class="color-group">
+                <span class="price-card-color color-33abc6"></span>
+                <span class="price-card-color color-1ccd8d"></span>
+                <span class="price-card-color color-a635ec"></span>
+              </div>
+              <p class="body">Vonna Neva Walnut Sandalye Chair</p>
+              <p class="price">195,13 $</p>
+            </div>
+          </div>
+          <div class="section-discover-items card-fdf0ab position-relative">
+            <button class="btn add-to-card">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path
+                  d="M2.96712 9.27214L7.60219 13.6263C7.65404 13.675 7.67996 13.6993 7.70464 13.7174C7.8805 13.8462 8.1195 13.8462 8.29536 13.7174C8.32004 13.6993 8.34597 13.675 8.39781 13.6263L13.0329 9.27214C14.337 8.04706 14.4954 6.03106 13.3985 4.61738L13.1923 4.35156C11.8802 2.66038 9.24642 2.94401 8.32445 4.87576C8.19421 5.14864 7.80579 5.14864 7.67556 4.87576C6.75358 2.94401 4.11982 2.66038 2.8077 4.35156L2.60146 4.61738C1.50463 6.03106 1.663 8.04706 2.96712 9.27214Z"
+                  stroke="#5F5F5F"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+            <img
+              src="img/Rectangle 19-2.png"
+              class="w-100"
+              alt="price card 4"
+            />
+            <div class="colors">
+              <p class="head">Colors</p>
+              <div class="color-group">
+                <span class="price-card-color color-7cb93e"></span>
+                <span class="price-card-color color-33abc6"></span>
+                <span class="price-card-color color-1ccd8d"></span>
+                <span class="price-card-color color-3f65ea"></span>
+                <span class="price-card-color color-f64a69"></span>
+                <span class="price-card-color color-a635ec"></span>
+                <span class="price-card-color color-f9a85d"></span>
+              </div>
+              <p class="body">Vonna Neva Walnut Sandalye Chair</p>
+              <p class="price">195,13 $</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="card-items">
+        <div class="prod-group">
+          <div class="prod-card">
+            <img src="img/1.png" alt="sellers profile image" />
+            <p class="title">Distressed Tote Leather Bag Leather Bag</p>
+            <p class="price">216,27 $</p>
+            <button class="btn add-to-card">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path
+                  d="M2.96712 9.27214L7.60219 13.6263C7.65404 13.675 7.67996 13.6993 7.70464 13.7174C7.8805 13.8462 8.1195 13.8462 8.29536 13.7174C8.32004 13.6993 8.34597 13.675 8.39781 13.6263L13.0329 9.27214C14.337 8.04706 14.4954 6.03106 13.3985 4.61738L13.1923 4.35156C11.8802 2.66038 9.24642 2.94401 8.32445 4.87576C8.19421 5.14864 7.80579 5.14864 7.67556 4.87576C6.75358 2.94401 4.11982 2.66038 2.8077 4.35156L2.60146 4.61738C1.50463 6.03106 1.663 8.04706 2.96712 9.27214Z"
+                  stroke="#5F5F5F"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="prod-card">
+            <img src="img/2.png" alt="sellers profile image" />
+            <p class="title">Distressed Tote Leather Bag Leather Bag</p>
+            <p class="price">216,27 $</p>
+            <button class="btn add-to-card">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path
+                  d="M2.96712 9.27214L7.60219 13.6263C7.65404 13.675 7.67996 13.6993 7.70464 13.7174C7.8805 13.8462 8.1195 13.8462 8.29536 13.7174C8.32004 13.6993 8.34597 13.675 8.39781 13.6263L13.0329 9.27214C14.337 8.04706 14.4954 6.03106 13.3985 4.61738L13.1923 4.35156C11.8802 2.66038 9.24642 2.94401 8.32445 4.87576C8.19421 5.14864 7.80579 5.14864 7.67556 4.87576C6.75358 2.94401 4.11982 2.66038 2.8077 4.35156L2.60146 4.61738C1.50463 6.03106 1.663 8.04706 2.96712 9.27214Z"
+                  stroke="#5F5F5F"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="prod-card">
+            <img src="img/3.png" alt="sellers profile image" />
+            <p class="title">Distressed Tote Leather Bag Leather Bag</p>
+            <p class="price">216,27 $</p>
+            <button class="btn add-to-card">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path
+                  d="M2.96712 9.27214L7.60219 13.6263C7.65404 13.675 7.67996 13.6993 7.70464 13.7174C7.8805 13.8462 8.1195 13.8462 8.29536 13.7174C8.32004 13.6993 8.34597 13.675 8.39781 13.6263L13.0329 9.27214C14.337 8.04706 14.4954 6.03106 13.3985 4.61738L13.1923 4.35156C11.8802 2.66038 9.24642 2.94401 8.32445 4.87576C8.19421 5.14864 7.80579 5.14864 7.67556 4.87576C6.75358 2.94401 4.11982 2.66038 2.8077 4.35156L2.60146 4.61738C1.50463 6.03106 1.663 8.04706 2.96712 9.27214Z"
+                  stroke="#5F5F5F"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="prod-card">
+            <img src="img/4.png" alt="sellers profile image" />
+            <p class="title">Distressed Tote Leather Bag Leather Bag</p>
+            <p class="price">216,27 $</p>
+            <button class="btn add-to-card">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path
+                  d="M2.96712 9.27214L7.60219 13.6263C7.65404 13.675 7.67996 13.6993 7.70464 13.7174C7.8805 13.8462 8.1195 13.8462 8.29536 13.7174C8.32004 13.6993 8.34597 13.675 8.39781 13.6263L13.0329 9.27214C14.337 8.04706 14.4954 6.03106 13.3985 4.61738L13.1923 4.35156C11.8802 2.66038 9.24642 2.94401 8.32445 4.87576C8.19421 5.14864 7.80579 5.14864 7.67556 4.87576C6.75358 2.94401 4.11982 2.66038 2.8077 4.35156L2.60146 4.61738C1.50463 6.03106 1.663 8.04706 2.96712 9.27214Z"
+                  stroke="#5F5F5F"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="prod-card">
+            <img src="img/5.png" alt="sellers profile image" />
+            <p class="title">Distressed Tote Leather Bag Leather Bag</p>
+            <p class="price">216,27 $</p>
+            <button class="btn add-to-card">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path
+                  d="M2.96712 9.27214L7.60219 13.6263C7.65404 13.675 7.67996 13.6993 7.70464 13.7174C7.8805 13.8462 8.1195 13.8462 8.29536 13.7174C8.32004 13.6993 8.34597 13.675 8.39781 13.6263L13.0329 9.27214C14.337 8.04706 14.4954 6.03106 13.3985 4.61738L13.1923 4.35156C11.8802 2.66038 9.24642 2.94401 8.32445 4.87576C8.19421 5.14864 7.80579 5.14864 7.67556 4.87576C6.75358 2.94401 4.11982 2.66038 2.8077 4.35156L2.60146 4.61738C1.50463 6.03106 1.663 8.04706 2.96712 9.27214Z"
+                  stroke="#5F5F5F"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="prod-card">
+            <img src="img/6.png" alt="sellers profile image" />
+            <p class="title">Distressed Tote Leather Bag Leather Bag</p>
+            <p class="price">216,27 $</p>
+            <button class="btn add-to-card">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path
+                  d="M2.96712 9.27214L7.60219 13.6263C7.65404 13.675 7.67996 13.6993 7.70464 13.7174C7.8805 13.8462 8.1195 13.8462 8.29536 13.7174C8.32004 13.6993 8.34597 13.675 8.39781 13.6263L13.0329 9.27214C14.337 8.04706 14.4954 6.03106 13.3985 4.61738L13.1923 4.35156C11.8802 2.66038 9.24642 2.94401 8.32445 4.87576C8.19421 5.14864 7.80579 5.14864 7.67556 4.87576C6.75358 2.94401 4.11982 2.66038 2.8077 4.35156L2.60146 4.61738C1.50463 6.03106 1.663 8.04706 2.96712 9.27214Z"
+                  stroke="#5F5F5F"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="cards-section-two-nav remove-card actve-card">
+          <button class="btn btn-cards active" id="card31">
+            <span class="hidden-text">card 21</span>
+          </button>
+          <button class="btn btn-cards" id="card32">
+            <span class="hidden-text">card 22</span>
+          </button>
+          <button class="btn btn-cards" id="card33">
+            <span class="hidden-text">card 23</span>
+          </button>
+        </div>
+      </section>
+      <article id="send-me">
+        <p class="text-style-p font-size-16">Yes!</p>
+        <p class="text-style-p">
+          Send me exclusive offers, unique gift ideas, and personalized tips for
+          shopping and selling on Commerce.
+        </p>
+        <form action="" method="post" id="send-me-form">
+          <label for="send-me-email" class="hidden-text">send me email</label>
+          <input
+            type="email"
+            id="send-me-email"
+            placeholder="Drop your Email"
+            required
+          />
+          <button type="submit" class="btn">
+            Subscribe
+            <i class="fa-solid fa-arrow-right fa-lg"></i>
+          </button>
+        </form>
+        <a href="#" class="small-text">First order only. You're ready?</a>
+      </article>
+      <div class="lable-text">
+        <span>Commerce, is powered by 100% renewable electricity.</span>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-4">
+            <a class="navbar-brand" href="#">E-commerce</a>
+            <p class="address">Cricklewood,London NW2 6qg, Uk</p>
+            <div class="social-media">
+              <a href="" class="facebook-color"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a href="" class="x-twitter-color"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+              <a href="" class="linkedin-color"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a href="" class="basketball-color"
+                ><i class="fa-solid fa-basketball"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-2 col-sm-12">
+            <ul class="footer-ul active">
+              <li class="footer-li-bold">
+                Shop <i class="fa-solid fa-chevron-down"></i>
+              </li>
+              <li class="footer-li"><a href="">Gift cards</a></li>
+              <li class="footer-li"><a href="">Site map</a></li>
+              <li class="footer-li"><a href="">Polka blog</a></li>
+              <li class="footer-li"><a href="">Login</a></li>
+              <li class="footer-li"><a href="">Sign in</a></li>
+            </ul>
+          </div>
+          <div class="col-2 col-sm-12">
+            <ul class="footer-ul">
+              <li class="footer-li-bold">
+                About <i class="fa-solid fa-chevron-down"></i>
+              </li>
+              <li class="footer-li"><a href="">Polka, Inc.</a></li>
+              <li class="footer-li"><a href="">Policies</a></li>
+              <li class="footer-li"><a href="">Investors</a></li>
+              <li class="footer-li"><a href="">Careers</a></li>
+              <li class="footer-li"><a href="">Press</a></li>
+            </ul>
+          </div>
+          <div class="col-2 col-sm-12">
+            <ul class="footer-ul">
+              <li class="footer-li-bold">
+                Sell <i class="fa-solid fa-chevron-down"></i>
+              </li>
+              <li class="footer-li"><a href="">Sell on Polka</a></li>
+              <li class="footer-li"><a href="">Teams</a></li>
+              <li class="footer-li"><a href="">Forums</a></li>
+              <li class="footer-li"><a href="">Affiliates</a></li>
+            </ul>
+          </div>
+          <div class="col-2 col-sm-12">
+            <ul class="footer-ul">
+              <li class="footer-li-bold">
+                Help <i class="fa-solid fa-chevron-down"></i>
+              </li>
+              <li class="footer-li"><a href="">Help Center</a></li>
+              <li class="footer-li"><a href="">Trust and safety</a></li>
+              <li class="footer-li"><a href="">Privacy settings</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="copyright">&copy; 2022 Commerce, Inc.</p>
+          <div class="footer-bottom-ul-container">
+            <ul class="footer-bottom-ul">
+              <li class="footer-bottom-li"><a href="">Privacy policy </a></li>
+              <li class="footer-bottom-li">
+                <a class="active" href="">Terms of use </a>
+              </li>
+              <li class="footer-bottom-li"><a href="">Cookies</a></li>
+            </ul>
+          </div>
+          <button class="btn" id="Scroll-to-top">
+            Scroll to top
+            <img src="svg/Arrow_top.svg" alt="Description" />
+          </button>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
